@@ -1,0 +1,33 @@
+
+<div class="profile-box">
+	<h1>Here's your deal </h1>	
+
+<div class="username-box">
+	You call yourself {{ jinglr.username }}
+</div>
+
+<div class="digits-box">
+	Your digits are {{ jinglr.digits }}
+</div>
+
+<div class="super-integer-box">
+	Your super integer is {{ jinglr.superInteger }}
+</div>
+
+<div ng-show="jinglr.cute" class="cute-box">
+	And you're cute!
+</div>
+
+<div ng-show="!jinglr.cute" class="cute-box">
+	And, while you're not especially cute, you have other positive qualities.
+</div>
+
+</div>
+
+</div>
+
+	<a ui-sref="JinglrsNearby"><div class="phone-woosh">
+  	<span class="glyphicon glyphicon-phone left"></span>
+  	<div><br/><h4> / Jingle helps you mingle! \</h4></div>
+  </a>
+  </div>

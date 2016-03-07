@@ -1,0 +1,26 @@
+db.digitsUsers.insert({
+	username: 'danny',
+	joinDate: 22222,
+	cute: true,
+	digits: [19,6,31,16,23,32],
+	superInteger: 8
+});
+
+db.digitsUsers.insert({
+	username: 'ariel',
+	joinDate: 22223,
+	cute: true,
+	digits: [23,3,35,11,21,39],
+	superInteger: 8
+});
+
+db.digitsUsers.insert({
+	username: 'mrComb',
+	joinDate: 22224,
+	cute: false,
+	digits: [13,16,12,23,20,32],
+	superInteger: 5
+});
+
+to find() this data, use query: db.digitsUsers.find().pretty()
+

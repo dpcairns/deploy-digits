@@ -1,0 +1,337 @@
+@import url('http://fonts.googleapis.com/css?family=Cantarell');
+
+body{
+	background: #ff3399;
+	color: #ffff00;
+	font-family: Cantarell;
+}
+
+
+.home-container{
+	margin-bottom: 5%;
+}
+
+.low-home-container{
+	border-radius: 70px 70px 70px 70px;
+	background-color: #ffb3d1;
+	display: block;
+	margin-left: 10%;
+	border: outset yellow 1px;
+	padding-bottom: 3em;
+	text-align: center;
+
+}
+
+.home-head-left{
+	float: left;
+	max-width: 60%;
+	padding: 2rem;
+}
+
+.home-head-right{
+		float: right;
+	max-width: 30%;
+	padding: 2rem;
+}
+.low-home-head{
+	color: #ff3399;
+	min-height: 8rem;
+	padding: 2rem;
+	font-weight: bolder;
+}
+
+.instructions{
+	margin-left: 2.5em;
+	margin-right: 2.5em;
+}
+
+.instruction {
+	text-align: center;
+	min-width: 100%;
+	min-height: 15rem;
+	border-right: outset yellow 1px;
+	border-left: outset yellow 1px;
+}
+.instruction:first-child{
+	border-radius: 45px 45px 0px 0px;
+	border-top: outset yellow 1px;
+	border-right: outset yellow 1px;
+	border-left: outset yellow 1px;
+
+
+}
+
+.instruction:last-child{
+	border-radius: 0px 0px 45px 45px;
+	border-bottom: outset yellow 1px;
+	border-right: outset yellow 1px;
+	border-left: outset yellow 1px;
+
+}
+
+.instruction:nth-child(even) {	
+	background-color: #ff3399;
+}
+.instruction:nth-child(odd) {
+	background-color: #ff4da6}
+
+.phone-woosh{
+	animation-name: woosh;
+	animation-duration: 1s;
+}
+
+@keyframes woosh {
+	from {
+		margin-left: -10000px;
+	}
+	to{
+		margin-right: -10000px;
+	}
+}
+
+.right-top-home{
+	float: right;
+	max-width: 45%;
+}
+.left-top-home{
+	float: left;
+	max-width: 45%;
+
+
+}
+
+.right{
+	float: right;
+	max-width: 45%;
+	padding: 2rem;
+}
+.left{
+	float: left;
+	max-width: 45%;
+	padding: 2rem;
+
+
+}
+
+.glyphicon-phone{
+font-size: 5em;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+
+}
+.glyphicon-phone:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.navbar-custom{
+	background-color: #ff1a8c;
+	z-index: 5;
+}
+
+a, a:visited, a:hover, a:active a{	color: #ffcc00;
+}
+
+.big-phone{
+	padding-top: 20%;
+	font-size: 10em;
+}
+.navbar-nav > li > a {
+    padding-top:0 !important; 
+    padding-bottom:0 !important;
+}
+
+.navbar-nav > li > a:hover {
+    padding-top:0 !important; 
+    padding-bottom:0 !important;
+    background-color: orange;
+}
+.navbar {min-height:5em !important;}
+
+.form-box {
+	border-radius: 10px;
+	float: right;
+	margin-right: 3em;
+	padding: 1em;
+	background-color: #ff66ff;
+	border: outset yellow 1px;
+}
+
+
+.jinglr-container{
+	font-size: 0;
+	text-align: justify;
+	margin-right: 1px;
+
+}
+
+.jinglr-container:after{
+	content:"";
+	display: inline-block;
+
+}
+
+.jinglr-box{
+	display: inline-block;
+	text-align: center;
+	vertical-align: text-top;
+	width: 30%;
+	border-radius: 25px;
+	min-height: 150px;
+	margin: 10px;
+	font-size: 1.5rem;
+	padding: 5px;
+	-webkit-transition: -webkit-transform;
+    transition: transform;
+
+}
+
+.profile-box{
+	text-align: center;
+	padding: 1em;
+	max-width: 60%;
+	font-size: 2em;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.top-gap{
+	margin-top: 5%;
+}
+.jinglr-box:hover{
+  -webkit-transform: rotate(2deg);
+  transform: rotate(2deg);
+  font-weight: 59; 
+}
+
+
+.username-box{
+	border-radius: 15px 15px 0px 0px;
+	border-top: outset #ffd11a 1px;
+	border-right: outset #ffd11a 1px;
+	border-left: outset #ffd11a 1px;
+	background-color: #ffb3d1;
+	color: #ff33cc;
+	padding: 3px;
+}
+
+.digits-box{
+	background-color: #ff66a3;
+	padding: 3px;
+	border-right: outset #ffd11a 1px;
+	border-left: outset #ffd11a 1px;
+
+}
+.super-integer-box{
+	background-color: #ffb3d1;
+	color: #ff33cc;
+	padding: 3px;
+	padding-bottom: 15px;
+	  border-radius: 0px 0px 15px 15px;
+	border-right: outset #ffd11a 1px;
+	border-left: outset #ffd11a 1px;
+	border-bottom: outset #ffd11a 1px;
+
+
+}
+
+.cute-box{
+	background-color: #ffff55;
+	color: #ff8c1a;
+	padding: 3px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: -10px;
+	border-radius: 0px 0px 15px 15px;
+	z-index: -1;
+	border-right: outset #ffd11a 1px;
+	border-left: outset #ffd11a 1px;
+	border-bottom: outset #ffd11a 1px;
+	vertical-align: middle;
+}
+
+.match-box {
+	background-color: orange;
+	color: black;
+	text-align: center;
+	border: outset black 1px;
+	min-width: 100%;
+	border-radius: 15px;
+}
+
+.match-box h1{
+	padding-bottom: .5em
+}
+.match .username-box{
+	border-radius: 15px 15px 0px 0px;
+	border-top: outset black 1px;
+	border-right: outset black 1px;
+	border-left: outset black 1px;
+	background-color: orange;
+	color: black;
+	padding: 3px;
+}
+
+.match .digits-box{
+	background-color: white;
+	color: red;
+	padding: 3px;
+	border-right: outset black 1px;
+	border-left: outset black 1px;
+
+}
+.match .super-integer-box{
+	background-color: orange;
+	color: black;
+	padding: 3px;
+	padding-bottom: 15px;
+	  border-radius: 0px 0px 15px 15px;
+	border-right: outset black 1px;
+	border-left: outset black 1px;
+	border-bottom: outset black 1px;
+
+
+}
+
+.match .cute-box{
+	background-color: white;
+	color:red;
+	padding: 3px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: -10px;
+	border-radius: 0px 0px 15px 15px;
+	z-index: -1;
+	border-right: outset black 1px;
+	border-left: outset black 1px;
+	border-bottom: outset black 1px;
+	vertical-align: middle;
+}
+
+.fading {
+	transition: 0.5s linear all;
+}
+
+.fading.ng-enter-stagger,
+.fading.ng-leave-stagger{
+	transition-delay:0.1s;
+	transition-duration:0s;
+
+}
+.fading.ng-enter { 
+	opacity: 0;
+}
+
+.fading.ng-enter.ng-enter-active {
+	opacity: 1;
+}
+
+.fading.ng-leave {
+  	opacity: 1;
+
+}
+
+.fading.ng-leave.ng-leave-active {
+  	opacity: 0;
+}
+

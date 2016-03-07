@@ -1,0 +1,81 @@
+<div class="container-fluid">
+		<div class="form-box text-center col-md-3">
+			<br/>
+			<span class="glyphicon glyphicon-phone"></span>
+			<div class="chooser">
+				<div class="form-group">
+					<label for="criteria"><h4><b>Narrow down those Jinglrs!</b></h4></label>
+					<input type="text" class="form-control" id="criteria" ng-model="criteria">
+				</div>
+				<div class="form-group">
+					<label for="cute"><h4>Only show cute Jinglrs</h4></label>
+					<input class="form-control" type="checkbox" id="cute" ng-model="jinglr.cute">
+				</div>
+				<div class="form-group">
+					<label for="matches"><h4>Show me Jinglrs with at least this many matches:</h4></label>
+					<input class="form-control" type="text" id="matches" ng-model="desiredMatches">
+					<button ng-click="showMatches(desiredMatches)" class="btn btn-sm btn-warning">Show me jinglrs!</button>
+				</div>
+			</div>
+		</div>
+	<div class="col-md-8">
+		<div ng-show="matchingJinglrs" class="jinglr-container match">
+			<div class="match-box"><h1>we got some matches here!</h1></div>
+			<div ng-repeat="matcher in matchingJinglrs | filter: criteria | orderBy: '-joinDate'" class="fading jinglr-box">			
+			<span ng-click="remove(jinglr._id)" class="glyphicon glyphicon glyphicon-chevron-down"></span>
+					<a ui-sref="JinglrProfile({ JinglrId: jinglr._id })">
+							<div class="username-box">
+							{{ matcher.username }} is nearby. 
+							</div>
+							<div class="digits-box">
+								Here are their digits:
+								{{ matcher.digits[0] }}
+								{{ matcher.digits[1] }}
+								{{ matcher.digits[2] }}
+								{{ matcher.digits[3] }}
+								{{ matcher.digits[4] }}
+								{{ matcher.digits[5] }}
+								{{ matcher.digits[6] }}
+							</div>
+							<div class="super-integer-box">
+								Their super integer is:
+								{{ matcher.superInteger }}
+							</div>
+						<div class="cute-box" ng-show="matcher.cute">
+							<i>aaaaaannnd they're <b>cute!</b></i>
+						</div>
+					</a>
+			</div>
+
+		</div>
+		<div class="jinglr-container">
+			<div ng-repeat="jinglr in jinglrs | filter: criteria | orderBy: '-joinDate'" class="fading jinglr-box">			
+			<span ng-click="remove(jinglr._id)" class="glyphicon glyphicon glyphicon-chevron-down"></span>
+					<a ui-sref="JinglrProfile({ JinglrId: jinglr._id })">
+							<div class="username-box">
+							{{ jinglr.username }} is nearby. 
+							</div>
+							<div class="digits-box">
+								Here are their digits:
+								{{ jinglr.digits[0] }}
+								{{ jinglr.digits[1] }}
+								{{ jinglr.digits[2] }}
+								{{ jinglr.digits[3] }}
+								{{ jinglr.digits[4] }}
+								{{ jinglr.digits[5] }}
+								{{ jinglr.digits[6] }}
+
+							</div>
+							<div class="super-integer-box">
+								Their super integer is:
+								{{ jinglr.superInteger }}
+							</div>
+						<div class="cute-box" ng-show="jinglr.cute">
+							<i>aaaaaannnd they're <b>cute!</b></i>
+						</div>
+					</a>
+			</div>
+
+		</div>
+	</div>
+</div>

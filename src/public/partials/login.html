@@ -1,0 +1,33 @@
+<div class="home-container top-gap">
+<form role="form"  class="form-horizontal">
+<fieldset>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="username">Who are you again?</label>  
+  <div class="col-md-4">
+  <input id="username" name="username" ng-model="user.username" type="text" placeholder="for example: geeWhiz87" class="form-control input-md">
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="password">Okay prove it. What's the password?</label>  
+  <div class="col-md-4">
+
+  <input id="password" name="password" ng-model="user.password" type="password" placeholder="for example: password1234" class="form-control input-md">
+  <br/>
+      <button type="button" ng-click="login(user)" class="btn btn-warning">Jingle on</button>
+
+  </div>
+</div>
+
+	<a ui-sref="home"><div class="phone-woosh">
+  	<span class="glyphicon glyphicon-phone left"></span>
+  	<div><br/><h4> / Jingle helps you mingle! \</h4></div>
+  </div>
+  </a>
+
+
+
+</fieldset>
+
+</form>
+
+</div>
