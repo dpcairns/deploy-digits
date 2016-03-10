@@ -8,7 +8,7 @@ var Jinglr = require('./src/public/models/JinglrModel')
 var cookieParser = require('cookie-parser')
 var morgan = require('morgan')
 var passport = require('passport')
-var db ='mongodb://127.0.0.1"27017/test';
+var db ='mongodb://127.0.0.1:27017/test';
 
 mongoose.connect(db);
 require('./config/passport')(passport);
@@ -122,5 +122,5 @@ app.post('/login', function(req, res, next) {
  
 });
 
-app.listen(80)
-console.log("Server for digits (really) 'funning' on 80")
+app.listen(8080)
+console.log("Server for digits (really) 'funning' on 8080")
