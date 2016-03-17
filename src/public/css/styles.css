@@ -12,6 +12,7 @@ body{
 	background: #ff3399;
 	color: #ffff00;
 	font-family: Cantarell;
+	overflow-x: hidden;
 }
 
 
