@@ -20,8 +20,12 @@ var Jinglr = new Schema({
 		default: false
 	},
 	digits: Array,
-	superInteger: Number
+	superInteger: Number,
+	sentMessages: Array,
+	receivedMessages: Array,
+
 });
 
 
 module.exports = mongoose.model('Jinglr', Jinglr)
+

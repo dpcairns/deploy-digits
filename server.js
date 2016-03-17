@@ -5,6 +5,7 @@ var session = require('express-session');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var Jinglr = require('./src/public/models/JinglrModel')
+var Message = require('./src/public/models/MessageModel')
 var cookieParser = require('cookie-parser')
 var morgan = require('morgan')
 var passport = require('passport')
@@ -63,6 +64,28 @@ app.post('/Jinglrs', passport.authenticate('local-signup', {
 	failureRedirect: '/#/login'
 }))
 
+
+app.post('/Messages', function (req, res) { //server behavior connected to $scope.addContact()..but how?
+		var newMessage = new Message();
+		newMessage.words = req.body.words;
+		newMessage.toUserId = req.body.toUserId;
+        newMessage.fromUserId = req.body.fromUserId;
+        newMessage.toUserName = req.body.toUserName;
+        newMessage.fromUserName = req.body.fromUserName;
+		Jinglr.findOne({ _id: newMessage.toUserId }, function (err, doc){
+				  doc.receivedMessages.push(newMessage)
+				  doc.save();
+				});
+		Jinglr.findOne({ _id: newMessage.fromUserId }, function (err, doc){
+				  doc.sentMessages.push(newMessage)
+				  doc.save();
+				});
+						///here push the message into both users' messages arrays...
+			newMessage.save(function() {
+					res.json(newMessage)
+					});
+
+					})
 
 app.get('/Jinglrs/:JinglrId', function (req, res) {
 	var userId = req.params.JinglrId

@@ -1,5 +1,13 @@
 @import url('http://fonts.googleapis.com/css?family=Cantarell');
 
+@media (max-width: 1000px) {
+
+.small-hide{
+	display: none !important;
+}
+}
+@import url('http://fonts.googleapis.com/css?family=Cantarell');
+
 body{
 	background: #ff3399;
 	color: #ffff00;
@@ -20,6 +28,13 @@ body{
 	padding-bottom: 3em;
 	text-align: center;
 
+}
+
+textarea{
+	width: 80%;
+	background-color: pink;
+	font-size: .5em;
+	color:black;
 }
 
 .home-head-left{
@@ -113,6 +128,33 @@ body{
 
 }
 
+.my-messages-box{
+	text-align: center;
+	margin-right:  5%;
+	max-width: 80% !important;
+	min-width: 60%;
+	background-color: #ff1a8c;
+	color:black;
+	border: white solid 2px;
+	border-radius: 15px;
+	margin-bottom: 10px;
+}
+
+.message-box{
+	width: 100%;
+	border: black solid 1px;
+	border-radius: 15px;
+	padding: 2px;
+	margin-bottom: 3px;
+}
+
+.inbox{
+	background-color: #FFFF7F 
+}
+
+.outbox{
+	background-color: #ff4da6;
+}
 .glyphicon-phone{
 font-size: 5em;
   -webkit-transition: -webkit-transform .8s ease-in-out;
@@ -335,3 +377,12 @@ a, a:visited, a:hover, a:active a{	color: #ffcc00;
   	opacity: 0;
 }
 
+
+.alert.ng-enter {
+  opacity: 0;
+  transition: opacity .5s ease-in;
+}
+
+.alert.ng-enter-active {
+  opacity: 1;
+}

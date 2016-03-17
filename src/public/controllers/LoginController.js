@@ -1,5 +1,5 @@
-digits.controller('LoginCtrl', function LoginCtrl($scope, $rootScope, $location, AuthService, $http){
-        $scope.login = function(user){
+digits.controller('LoginCtrl', function LoginCtrl($scope, $rootScope, $location, AuthService, $http, Flash){
+        $scope.login = function(user){       
  		$scope.error = false;
  		$scope.disabled = true;
  		AuthService.login(user)
@@ -14,10 +14,9 @@ digits.controller('LoginCtrl', function LoginCtrl($scope, $rootScope, $location,
 
 	 				})
  			.catch(function(){
- 				$scope.error = true;
- 				$scope.errorMessage = "Invalid username or password";
- 				$scope.disabled = false;
- 				$scope.user = {};
+ 			$scope.disabled = false;	
+			$scope.error = true;		
+			$scope.user = {};
  			})
         };  
 });

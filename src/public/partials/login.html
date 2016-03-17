@@ -1,6 +1,7 @@
-<div class="home-container top-gap">
+<div class="home-container">
 <form role="form"  class="form-horizontal">
 <fieldset>
+<h2>Log in</h2>
 <div class="form-group">
   <label class="col-md-4 control-label" for="username">Who are you again?</label>  
   <div class="col-md-4">
@@ -17,6 +18,9 @@
 
   </div>
 </div>
+
+<flash-message duration="5000" show-close="true" on-dismiss="myCallback(flash);"></flash-message> 
+
 
 	<a ui-sref="home"><div class="phone-woosh">
   	<span class="glyphicon glyphicon-phone left"></span>

@@ -7,14 +7,16 @@
 					<label for="criteria"><h4><b>Narrow down those Jinglrs!</b></h4></label>
 					<input type="text" class="form-control" id="criteria" ng-model="criteria">
 				</div>
+				<!--
 				<div class="form-group">
 					<label for="cute"><h4>Only show cute Jinglrs</h4></label>
 					<input class="form-control" type="checkbox" id="cute" ng-model="jinglr.cute">
 				</div>
+				-->
+
 				<div class="form-group">
 					<label for="matches"><h4>Show me Jinglrs with at least this many matches:</h4></label>
-					<input class="form-control" type="text" id="matches" ng-model="desiredMatches">
-					<button ng-click="showMatches(desiredMatches)" class="btn btn-sm btn-warning">Show me jinglrs!</button>
+					<input class="form-control" type="number" min="1" max="7" ng-change="showMatches(desiredMatches)" size="10" id="matches" ng-model="desiredMatches">	
 				</div>
 			</div>
 		</div>

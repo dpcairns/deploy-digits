@@ -3,7 +3,7 @@
 	<h1>Here's the deal with this jinglr </h1>	
 
 <div class="username-box">
-	They call themselves {{ jinglr.username }}
+	They call themselves <strong>{{ jinglr.username }}</strong>
 </div>
 
 <div class="digits-box">
@@ -22,9 +22,16 @@
 	And, while they're not especially cute, they have other positive qualities.
 </div>
 
+<div class="digits-box top-gap" style="padding: 1em; border-radius:15px">
+		<textarea type="textarea" ng-model="message.words" rows="5" />
+		<button class="btn btn-danger" ng-click="addMessage(message)">
+			send a message
+		</button>
+</div>
 </div>
 
 </div>
+<flash-message duration="5000" show-close="true" on-dismiss="myCallback(flash);"></flash-message> 
 
 	<a ui-sref="JinglrsNearby"><div class="phone-woosh">
   	<span class="glyphicon glyphicon-phone left"></span>

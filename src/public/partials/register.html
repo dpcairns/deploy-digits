@@ -1,9 +1,10 @@
-<div class="home-container top-gap">
+<div class="home-container">
 <form role="form" class="form-horizontal">
 <fieldset>
 
 <!-- Form Name -->
-
+<h3 style="background-color:red"><b>(WARNING!!! this form is not secure; information submitted will be entered in the database unencrypted. please do not use passwords from other sites. pick something new.)</b></h3>
+<h2>Register</h2>
 <!-- Multiple Radios -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="checkbox">Are you cute?</label>
@@ -23,13 +24,15 @@
   <label class="col-md-4 control-label" for="username">Pick a username</label>  
   <div class="col-md-4">
   <input id="username" name="username" ng-model="jinglr.username" type="text" placeholder="for example: geeWhiz87" class="form-control input-md">
-  <label class="col-md-4 control-label" for="username">Pick a password WARNING!!! THIS APP IS NOT SECURE!!! I TRIED TO MAKE IT SECURE BUT IT IS NOT!!! DO NOT ENTER SENSITIVE INFORMATION!!!</label>  
+  <label class="col-md-4 control-label" for="username">Pick a password</label>  
   <input id="password" name="password" ng-model="jinglr.password" type="password" placeholder="for example: password1234" class="form-control input-md">
   <br/>
     <button type="submit" ng-click="addJinglr(jinglr.username, jinglr.password, jinglr)" class="btn btn-warning">Make a Jinglr!</button>
 
   </div>
 </div>
+<flash-message duration="5000" show-close="true" on-dismiss="myCallback(flash);"></flash-message> 
+
   <a ui-sref="home"><div class="phone-woosh">
     <span class="glyphicon glyphicon-phone left"></span>
     <div><br/><h4> / Jingle helps you mingle! \</h4></div>

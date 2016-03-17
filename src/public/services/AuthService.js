@@ -1,4 +1,4 @@
-digits.factory('AuthService', function AuthService($q, $timeout, $http, $rootScope){
+digits.factory('AuthService', function AuthService($q, $timeout, $http, $rootScope, Flash){
 	var user = null;
 	return (
 		{
@@ -36,6 +36,9 @@ digits.factory('AuthService', function AuthService($q, $timeout, $http, $rootSco
 			})
 			.error(function(jinglr){
 				user = false;
+				var message = '<strong>Boo!</strong> You didn\'t put the right stuff in there. Try again.';
+                        	var id = Flash.create('danger', message, 7000, {class: 'custom-class', id: 'custom-id'}, true);
+                        	console.log("flash should go now")
 				deferred.reject();
 			})
 
@@ -58,7 +61,7 @@ digits.factory('AuthService', function AuthService($q, $timeout, $http, $rootSco
 	}
 	function register(username, password, jinglr){
 		var deferred = $q.defer();
-		$http.post('/Jinglrs', {'username': username, 'password': password, 'jinglr': jinglr})
+		$http.post('/Jinglrs', {'username': username, 'password': password, 'cute': cute, 'jinglr': jinglr})
 		.success(function(data, status){
 			window.location = '/#/'
 			if(status === 200 & data.status){
