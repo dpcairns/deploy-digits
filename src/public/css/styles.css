@@ -157,6 +157,7 @@ textarea{
 	background-color: #ff4da6;
 }
 .glyphicon-phone{
+color: #ffff00 !important;
 font-size: 5em;
   -webkit-transition: -webkit-transform .8s ease-in-out;
   transition: transform .8s ease-in-out;
@@ -194,9 +195,10 @@ a, a:visited, a:hover, a:active a{	color: #ffcc00;
 .form-box {
 	border-radius: 10px;
 	float: right;
+	color: #ff33cc;
 	margin-right: 3em;
 	padding: 1em;
-	background-color: #ff66ff;
+	background-color: #ffb3d1;
 	border: outset yellow 1px;
 }
 
